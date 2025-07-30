@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000;
 
 async function main() {
   try {
-    await sequelize.sync({ force: false }); // Cambia a true si quieres recrear tablas en cada inicio
+    await sequelize.sync({ force: false }); 
     console.log('Base de datos sincronizada');
 
     app.listen(PORT, () => {

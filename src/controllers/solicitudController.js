@@ -12,7 +12,6 @@ async function crearSolicitud(req, res) {
       observaciones = '',
     } = req.body;
 
-    // Validar trabajador existe
     const trabajador = await Trabajador.findByPk(trabajador_id);
     if (!trabajador) return res.status(404).json({ error: 'Trabajador no encontrado' });
 
